@@ -40,7 +40,6 @@ public class WithVirtualNodeConsistentHashing {
     private static String getServer(String str) {
     	long hash = ServersArray.getHash(str);
     	SortedMap<Long,String> subMap = virtualNodes.tailMap(hash);
-    	String serverName;
     	String virtualNode;
     	if(subMap.size() > 0) {
     		Long i = subMap.firstKey();
