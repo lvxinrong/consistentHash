@@ -13,7 +13,7 @@ public class ConsistentHashingWithoutVirtualNode {
 	public static String[] servers = { "192.168.0.0:111", "192.168.0.1:111", "192.168.0.2:111", "192.168.0.3:111",  
 	            "192.168.0.4:111", "192.168.0.5:111" , "192.168.0.6:111" };
   
-    /**  
+    /**
      * key表示服务器的hash值，value表示服务器的名称  
      */  
     private static SortedMap<Integer, String> sortedMap = new TreeMap<Integer, String>();  
@@ -26,8 +26,7 @@ public class ConsistentHashingWithoutVirtualNode {
             int hash = getHash(servers[i]);  
             System.out.println("[" + servers[i] + "]加入集合中, 其Hash值为" + hash);  
             sortedMap.put(hash, servers[i]);  
-        }  
-        System.out.println();  
+        }
     }  
   
     /**  
